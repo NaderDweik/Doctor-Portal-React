@@ -1,0 +1,709 @@
+/* styles/Summary.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.user-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.icon-button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+.icon-button img {
+    width: 20px;
+    height: 20px;
+}
+
+main {
+    margin-top: 60px; /* Add margin to avoid overlap with the fixed header */
+    margin-left: 250px; /* Leave space for the sidebar */
+    padding: 20px;
+}
+
+
+.impressions-section {
+    margin-left: 240px;
+    padding: 30px;
+}
+
+
+.impressions-title {
+    margin-left: 100px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+.impressions-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.impressions-selection {
+    flex: 1 1 300px;
+    margin-right: 20px;
+}
+
+.impressions-upload {
+    flex: 1 1 500px;
+}
+
+.selection-title,
+.upload-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.radio-group {
+    margin-bottom: 15px;
+}
+
+.radio-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.digital-options,
+.physical-options {
+    margin-left: 20px;
+}
+
+.upload-boxes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.upload-box {
+    width: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.upload-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.upload-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.upload-text {
+    color: red;
+    font-size: 14px;
+}
+
+.file-input {
+    display: none;
+}
+
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.menu-link {
+    font-size: 18px;
+    color: #0c0c0c;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu-link-photos {
+    color: gray !important;
+}
+
+.menu-item.patient-info :hover,
+.menu-item.impressions :hover,
+.menu-item.prescription :hover,
+.menu-item.summary :hover,
+.menu-item.submission :hover {
+    color: rgb(103, 103, 103) !important;
+}
+
+.menu-item:hover {
+    color: black !important;
+}
+
+.menu-icon {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.menu-item-selected {
+    color: grey;
+    width: 232px;
+    background-color: var(--white);
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.menu-link-impression {
+    color: rgb(255,255, 255) !important;
+}
+
+
+
+.menu-icon-selected {
+    background-color: var(--highlight-color);
+    border-radius: 50%;
+    padding: 5px;
+    color: grey;
+}
+
+
+
+.menu-item-active {
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    padding: 10px;
+    color: gray !important;
+}
+
+.menu-item-selected .menu-link {
+    color: #000000;
+}
+
+nav ul li a:hover {
+    background-color: var(--highlight-color);
+    padding: 10px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li.active a {
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+li.menu-item.impressions {
+    border-radius: 35px;
+    padding: 10px;
+    font-size: larger;
+    color: rgb(0, 0, 0);
+    width: 262px;
+    margin-left: -10px;
+}
+
+.menu-item.photos-xrays.menu-item-selected {
+    background-color: rgb(255, 255, 255);
+    border-radius: 35px;
+    padding: 10px;
+    font-size: larger;
+    color: rgb(0, 0, 0);
+    width: 262px;
+}
+
+.menu-item.impressions.menu-item-selected {
+    background-color: rgb(255, 255, 255);
+    border-radius: 35px;
+    padding: 10px;
+    font-size: larger;
+    color: rgb(255, 255, 255);
+    width: 262px;
+}
+
+
+li.menu-item.impressions.menu-item-selected {
+    background-color: rgb(255, 255, 255) !important;
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+    padding: 10px;
+    font-size: larger;
+    color: rgb(0, 0, 0);
+    width: 265px;
+    
+}
+
+
+li.menu-item.photos-xrays.menu-item-selected {
+    background-color: rgb(244, 244, 244);
+    border-radius: 45px;
+    padding: 30px;
+    font-size: larger;
+    color: rgb(0, 0, 0);
+}
+
+.menu-item.submission {
+    border-radius: 45px;
+}
+
+.menu-item.menu-item.patient-info {
+    border-radius: 45px;
+}
+
+.menu-item.menu-item.menu-item.prescription {
+    border-radius: 45px;
+}
+
+.menu-item.menu-item.menu-item.summary {
+    border-radius: 45px;
+}
+
+/* Impressions Page Specific Styles */
+
+.impressions-section {
+    margin-left: 240px;
+    padding: 30px;
+}
+
+.impressions-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+}
+
+.impressions-selection {
+    flex: 1 1 300px;
+    margin-right: 20px;
+}
+
+.impressions-upload {
+    flex: 1 1 500px;
+}
+
+.selection-title,
+.upload-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.radio-group {
+    margin-bottom: 15px;
+}
+
+.radio-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.digital-options,
+.physical-options {
+    margin-left: 20px;
+}
+
+.upload-boxes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.upload-box {
+    width: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.upload-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.upload-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.upload-text {
+    color: red;
+    font-size: 14px;
+}
+
+.file-input {
+    display: none;
+}
+
+    
+.case-info {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    margin-top: 140px; /* Adjusted top margin */
+    color: #333;
+    line-height: 1.5;
+margin-right: -150px;}
+
+.summary-section {
+    margin-top: 10px;
+    margin-left: 39px;    
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 35px;
+    
+
+    h2 {
+        font-size: 22px;
+        color: #333;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #00c7b1;
+        padding-bottom: 5px;
+    }
+
+    p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 15px;
+    }
+
+    .teeth-chart {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            span {
+                font-size: 14px;
+                color: #333;
+                padding: 5px 10px;
+                background-color: #e6f7f5;
+                border-radius: 4px;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}
+
+h3 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+button.nav-btn-p,
+button.nav-btn-n {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.nav-btn-p:hover,
+button.nav-btn-n:hover {
+    background-color: #009484;
+}
+
+.teeth-restrictions-section .dental-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 0.5px solid #ccc;
+    margin: 10px auto;
+    max-width: 100%;
+}
+
+
+.upper-arch{
+
+
+
+
+}
+.upper-arch,
+.lower-arch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+    width: 1000px;
+    margin-top: 26px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+
+.tooth-side.left{
+
+}
+
+.right-side,
+.left-side {
+    padding-left: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4px;
+}
+
+.tooth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+.tooth-number,
+.tooth-number-down {
+    font-size: 0.6rem;
+    color: #555;
+    padding-bottom: 2px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.upper-arch .tooth-number,
+.upper-arch .tooth-number-down {
+    bottom: 100%;
+    transform: translateY(-3px);
+}
+
+.lower-arch .tooth-number,
+.lower-arch .tooth-number-down {
+    top: 100%;
+    transform: translateY(3px);
+}
+
+.tooth-svg {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    max-width: 20px;
+    max-height: 80%;
+    overflow: hidden;
+    border-radius: 0px;
+}
+
+.tooth {
+    fill: #f6f5f5 !important;
+    stroke: #ffffff !important;
+    stroke-width: 1px;
+    transition: fill 0.2s ease;
+    width: 100%;
+    height: 100%;
+}
+
+.tooth:hover {
+    fill: #d1d1d1 !important;
+}
+
+.tooth.selected {
+    fill: #b1b1b1 !important;
+    stroke-width: 2px;
+}
+
+.tooth-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background-image: url('Media/icons/Restrictmove.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+    transition: visibility 0.3s ease, opacity 0.3s ease;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.tooth-container .tooth-overlay.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    margin-left: 230px; /* Match the sidebar width */
+    padding: 20px;
+    box-sizing: border-box;
+    width: calc(100% - 230px); /* Ensure the main content fits next to the sidebar */
+    margin-top: 60px; /* Avoid overlap with the header */
+}
+
+.summary-header {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-top: 14px;
+}
+
+.summary-header h1 {
+    font-size: 28px;
+    color: #00c7b1;
+    margin: 0;
+}
+
+.summary-section {
+    margin-left: 39px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 0px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.summary-section h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #00c7b1;
+    padding-bottom: 5px;
+}
+
+.summary-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.teeth-restrictions-section {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.teeth-restrictions-section .dental-chart {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* Step background styles */
+.menu-item.menu-item-selected .step-background {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 10; /* Place the step background behind the text */
+    width: 111%;
+    height: auto;
+}
+
+.menu-item.menu-item-selected.summary-item .step-background {
+    margin-top: 390px; /* Adjust the position for the Summary page */
+}
+
+@media (max-width: 768px) {
+    main {
+        margin-left: 0; /* Remove sidebar offset for smaller screens */
+        width: 100%; /* Main content spans the full width */
+        padding: 10px;
+    }
+}
+
+
+
