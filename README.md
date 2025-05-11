@@ -1,12 +1,109 @@
-# React + Vite
+# Eon Dental Case Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+The Eon Dental Case Management System is a comprehensive web application designed for dental professionals to manage clear aligner treatment cases. This modern React-based platform streamlines the entire case workflow from patient information intake to final submission, making it easier for dental clinics to provide clear aligner services to their patients.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Key Features
 
-## Expanding the ESLint configuration
+### Dashboard
+- At-a-glance case statistics and metrics
+- Recent case overview with filtering capabilities
+- Notification center for important case updates
+- Upcoming appointment tracking
+- Quick access to resources and support
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Case Management Workflow
+1. **Patient Information** - Record basic patient details
+2. **Photos & X-Rays** - Upload and manage dental images in a structured format
+3. **Impressions** - Multiple submission options:
+   - Digital file upload (STL, PLY, DCM)
+   - External link sharing
+   - Physical impression pickup service
+4. **Prescription** - Specify detailed treatment preferences:
+   - Treatment type selection
+   - Clinical preferences configuration
+   - Teeth movement restrictions
+5. **Summary Review** - Final verification of all case details before submission
+
+### User Settings
+- Profile management
+- Clinical preference defaults
+- Address management for impression pickups
+- Access to resources and documentation
+
+## Technical Implementation
+
+### Frontend Stack
+- React.js with functional components and hooks
+- Redux Toolkit for state management
+- React Router for navigation
+- Tailwind CSS for responsive design
+
+### Key React Patterns
+- Custom form components with validation
+- File upload handling with FileReader API
+- Dynamic conditional rendering based on user selections
+- Multi-step workflow with state persistence
+- Responsive design for all device sizes
+
+### State Management
+- Centralized Redux store with slice pattern
+- Separate slices for different feature areas:
+  - `impressionSlice` - For dental impression data
+  - `prescriptionSlice` - For treatment preferences
+  - `settingsSlice` - For user profile and preferences
+  - `summarySlice` - For photos and X-rays
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v14.0.0 or later)
+- npm (v6.0.0 or later)
+
+### Installation
+1. Clone the repository
+```bash
+git clone https://github.com/your-username/eon-dental-case-system.git
+cd eon-dental-case-system
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Start the development server
+```bash
+npm start
+```
+
+4. Open your browser and navigate to `http://localhost:3000`
+
+## Project Structure
+```
+src/
+├── assets/         # Images, icons, and other static assets
+├── components/     # Reusable UI components
+│   └── layout/     # Layout components (Header, Sidebar, Footer)
+├── pages/          # Main page components
+├── redux/          # Redux store configuration
+│   └── slices/     # Redux Toolkit slices
+├── styles/         # Global styles and Tailwind configuration
+├── utils/          # Utility functions and helpers
+├── App.js          # Main application component
+└── index.js        # Application entry point
+```
+
+## Future Enhancements
+- Patient record database integration
+- Calendar and scheduling system
+- Treatment plan visualization
+- Case progress tracking
+- Mobile application for on-the-go case management
+
+## License
+This project is proprietary and confidential. Unauthorized use, distribution, or modification is prohibited.
+
+## Contact
+For support or inquiries, please contact [support@eonaligner.com](mailto:support@eonaligner.com)
