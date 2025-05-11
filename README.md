@@ -6,6 +6,9 @@ The Doctor Portal for Case Management is a comprehensive web application designe
 
 ## Key Features
 
+![Uploading image.png…]()
+
+
 ### Dashboard
 - At-a-glance case statistics and metrics
 - Recent case overview with filtering capabilities
